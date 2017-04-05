@@ -1,0 +1,581 @@
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/cropit.css"  media="screen,projection"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<title>Sistem Mahasiswa UNJ</title>
+  	<link rel="shortcut icon" href="images/logo_unj.png"/>
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav class="top-nav fixed">
+	       <div class="nav-wrapper">
+	         <a href="#" class="brand-logo">SIMAS</a>
+	            	<ul class="right hide-on-med-and-down">
+	                	<li>
+	              			<a class="dropdown-button" href="#!" data-activates="dropdown1">
+	                			BEM FT
+	                			<i class="material-icons right">arrow_drop_down</i>
+	              			</a>
+	            		</li>
+	            	</ul>
+	            	<ul id="dropdown1" class="dropdown-content">
+	        			<li>
+	        				<a href="#!">Keluar 
+	        					<i class="material-icons right">arrow_forward</i>
+	        				</a>
+	        			</li>
+	      			</ul>
+	        	</div>
+	      </nav>
+	   </div>
+		 <div class="row" style="padding:15px">
+      		<div class="col s12 m4 l3 z-depth-3" style="position: relative">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/bemft.png" style="position: relative;width: 100%;">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">
+                BEM FT
+                <i class="material-icons right">vertical_align_top</i></span>
+                <br>
+                <p><a class="waves-effect waves-light btn amber darken-3" href="#modal_foto" style="width:100%">
+                  <i class="modal-trigger material-icons left">party_mode</i>
+                  UBAH FOTO LOGO
+                </a>
+                <div id="modal_foto" class="modal">
+                  <div class="modal-content">
+                    <h5>UBAH FOTO LOGO</h5>
+                    <div class="divider"></div>
+                    <br>
+                    <div class="row">
+                      <div class="col s6">
+                        <div class="image-editor">
+                          <input type="file" class="cropit-image-input">
+                          <br>
+                          <div class="cropit-preview" style="border:1px solid #000"></div>
+                          <div class="image-size-label">
+                            Menentukan ukuran foto
+                          </div>
+                          <input type="range" class="cropit-image-zoom-input">
+                          <button id="export" class="waves-effect waves-light btn blue">Potong</button>
+                        </div>
+                      </div>
+                      <div class="col s6">
+                        <div id="hasil_foto">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">SIMPAN</a>
+                  </div>
+                </div>
+                </p>    
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                  BEM FT
+                  <i class="material-icons right">close</i></span>
+                  <p>Gedung L Fakultas Teknik UNJ</p>
+              </div>
+            </div>
+      		</div>
+      		<div class="col s12 m8 l9" style="padding-left:30px">
+            <div class="row">
+              <div class="col s12">
+                <ul class="tabs" style="border-radius: 10px">
+                  <li class="tab col s4"><a href="#test1" class="active">DATA ORGANISASI</a></li>
+                  <li class="tab col s4"><a href="#test2">RENCANA KEGIATAN</a></li>
+                  <li class="tab col s4"><a href="#test3">LAPORAN KEGIATAN</a></li>
+                </ul>
+              </div>
+              <div id="test1" class="col s12">
+                <br>
+                <div class="row">
+                  <div class="col s6">
+                    <div style="font-size: 28px">DATA ORGANISASI</div>
+                  </div>
+                  <div class="col s6">
+                    <a class="modal-trigger waves-effect waves-light btn orange" href="#ubah_organisasi"><i class="material-icons left">mode_edit</i>Ubah Data Organisasi</a>
+                    <div id="ubah_organisasi" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                        <h5>Ubah Data Organisasi</h5>
+                        <div class="divider"></div>
+                        <form validate id="form_ubah_organisasi">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea name="deskripsi" class="materialize-textarea" required></textarea>
+                            <label for="deskripsi">Deskripsi Organisasi</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <textarea name="visi" class="materialize-textarea" required></textarea>
+                            <label for="visi">Visi Organisasi</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <textarea name="misi" class="materialize-textarea" required></textarea>
+                            <label for="misi">Misi Organisasi</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <input placeholder="Nama Ketua" id="nama_ketua" type="text" class="validate" required>
+                            <label for="nama_ketua">Nama Ketua</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <input placeholder="Nama Wakil Ketua" id="nama_wakil_ketua" type="text" class="validate" required>
+                            <label for="nama_wakil_ketua">Nama Wakil Ketua</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input placeholder="Nama Sekretaris" id="nama_sekretaris" type="text" class="validate" required>
+                            <label for="nama_sekretaris">Nama Sekretaris</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input placeholder="Nama Bendahara" id="nama_bendahara" type="text" class="validate" required>
+                            <label for="nama_bendahara">Nama Bendahara</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input placeholder="Nama Admin" id="nama_admin" type="text" class="validate" required>
+                            <label for="nama_bendahara">Nama Admin</label>
+                          </div>
+                        </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" form="form_ubah_organisasi" class="modal-action waves-effect waves-green btn-flat ">Simpan</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <br>
+                <table class="bordered striped responsive-table">
+                  <tr>
+                    <td width="200px"><b>Deskripsi</b></td>
+                    <td width="10px">:</td>
+                    <td>
+                      BEM-FT merupakan lembaga kemahasiswaan intra kampus yang bergerak dalam ruang lingkup fakultas FT UNJ. Sebagai lembaga eksekutif di FT, sudah selayaknya BEM FT menunjukan eksistensinya melalui program-program yang bersifat ilmiah serta memenuhi kebutuhan akademik mahasiswa FT dengan pelayanan yang optimal.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Visi</b></td>
+                    <td>:</td>
+                    <td>
+                      “ Menjadikan Badan Eksekutif  Mahasiswa Fakultas Teknik sebagai Wadah Aspirasi dan Motor Penggerak bagi Civitas Akademika FT-UNJ  melalui proses Pendidikan, Penelitian, dan Pengabdian kepada masyarakat.”
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Misi</b></td>
+                    <td>:</td>
+                    <td>
+                      Menciptakan sistem kerja yang professional di BEM FT-UNJ dalam bingkai kekeluargaan.
+                      Meningkatkan Peran Advokasi Mahasiswa FT-UNJ secara Optimal.
+                      Mengembangkan Kemampuan Akademik dan Non Akademik civitas akademika FT-UNJ.
+                      Menjalin gerakan kolaburasi yang sinergis dan harmonis bersama Elemen Opmawa dan Ormawa yang berada di FT dan UNJ.
+                      Membangun Kontribusi nyata dan Bermanfaat untuk FT-UNJ dan bisa menerapkan dalam Pengabdian Masyarakat.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Nama Ketua</b></td>
+                    <td>:</td>
+                    <td>
+                      Fulan bin Fulan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Nama Wakil Ketua</b></td>
+                    <td>:</td>
+                    <td>
+                      Fulan bin Fulan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Nama Sekretaris</b></td>
+                    <td>:</td>
+                    <td>
+                      Fulan bin Fulan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Nama Bendahara</b></td>
+                    <td>:</td>
+                    <td>
+                      Fulan bin Fulan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Nama Admin</b></td>
+                    <td>:</td>
+                    <td>
+                      Fulan bin Fulan
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="test2" class="col s12">
+                <br>
+                <div class="row">
+                  <div class="col s6">
+                    <div style="font-size: 28px">DATA RENCANA KEGIATAN</div>
+                  </div>
+                  <div class="col s6">
+                    <a class="modal-trigger waves-effect waves-light btn blue" href="#tambah_rencana"><i class="material-icons left">mode_edit</i>Tambah rencana kegiatan</a>
+                    <div id="tambah_rencana" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                        <h5>Tambah Data Rencana Kegiatan</h5>
+                        <div class="divider"></div>
+                        <br>
+                        <form validate id="form_tambah_rencana">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input placeholder="Nama Kegiatan" id="nama_kegiatan" type="text" class="validate" required>
+                              <label for="nama_kegiatan">Nama Kegiatan</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Bentuk Kegiatan" id="bentuk_kegiatan" type="text" class="validate">
+                              <label for="bentuk_kegiatan">Bentuk Kegiatan</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input name="tanggal_mulai" type="date" class="datepicker" required="" aria-required="true">
+                              <label for="tanggal_mulai">Tanggal Mulai</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input name="tanggal_selesai" type="date" class="datepicker" required="" aria-required="true">
+                              <label for="tanggal_selesai">Tanggal Selesai</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Tempat Pelaksanaan" id="tempat" type="text" class="validate" required>
+                              <label for="tempat">Tempat Pelaksanaan</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <textarea id="pengisi_acara" class="materialize-textarea" placeholder="Pengisi Acara/Materi"></textarea>
+                              <label for="pengisi_acara">Pengisi Acara/Materi</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Rencana Anggaran" id="rencana_anggaran" type="text" class="validate" required>
+                              <label for="tempat">Rencana Anggaran</label>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Proposal Kegiatan</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" form="form_tambah_rencana" class="modal-action waves-effect waves-green btn-flat ">Simpan</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <br>
+                <table class="responsive-table bordered striped">
+                  <tr>
+                    <th>Nama Kegiatan</th>
+                    <th>Tempat Pelaksanaan </th>
+                    <th>Tanggal Mulai</th>
+                    <th>Tanggal Selesai</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                  </tr>
+                  <tr>
+                    <td>Bluefest 2016</td>
+                    <td>Fakultas Teknik</td>
+                    <td>01-02-2017</td>
+                    <td>03-02-2017</td>
+                    <td>Diproses</td>
+                    <td>
+                      <a class="modal-trigger btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="10" data-tooltip="Hapus" href="#modal_hapus_rencana">
+                        <i class="material-icons">delete_sweep</i>
+                      </a>
+                      <div id="modal_hapus_rencana" class="modal">
+                        <div class="modal-content">
+                          <h4 style="color:orange">PERINGATAN</h4>
+                          <p>Apakah Anda yakin ingin menghapus data ini?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ya</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="test3" class="col s12">
+                <br>
+                <div class="row">
+                  <div class="col s6">
+                    <h5>DATA LAPORAN KEGIATAN</h5>
+                  </div>
+                  <div class="col s6">
+                    <a class="modal-trigger waves-effect waves-light btn blue" href="#tambah_laporan"><i class="material-icons left">mode_edit</i>Tambah laporan kegiatan</a>
+                    <div id="tambah_laporan" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                        <h5>Tambah Data Laporan Kegiatan</h5>
+                        <div class="divider"></div>
+                        <br>
+                        <form validate id="form_tambah_laporan">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input placeholder="Nama Kegiatan" id="nama_kegiatan" type="text" class="validate" required>
+                              <label for="nama_kegiatan">Nama Kegiatan</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Bentuk Kegiatan" id="bentuk_kegiatan" type="text" class="validate">
+                              <label for="bentuk_kegiatan">Bentuk Kegiatan</label>
+                            </div>
+                            <br>
+                            <div style="font-size:20px">Realisasi Kegiatan</div>
+                            <div class="divider"></div>
+                            <br>
+                            <div class="input-field col s6">
+                              <input name="tanggal_mulai" type="date" class="datepicker" required="" aria-required="true">
+                              <label for="tanggal_mulai">Tanggal Mulai</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input name="tanggal_selesai" type="date" class="datepicker" required="" aria-required="true">
+                              <label for="tanggal_selesai">Tanggal Selesai</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Tempat Pelaksanaan" id="tempat" type="text" class="validate" required>
+                              <label for="tempat">Tempat Pelaksanaan</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Jumlah Peserta" id="jumlah_peserta" type="text" class="validate angka" required>
+                              <label for="tempat">Jumlah Peserta</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <textarea id="pengisi_acara" class="materialize-textarea" placeholder="Pengisi Acara/Materi"></textarea>
+                              <label for="pengisi_acara">Pengisi Acara/Materi</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Anggaran yang dipakai" id="anggaran" type="text" class="validate angka" required>
+                              <label for="tempat">Anggaran yang dipakai</label>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Scan Bukti LPJ</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Scan Bukti LPJ</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Press Release (Word)</span>
+                                <input type="file" required>
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Dokumentasi 1</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Dokumentasi 2</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Dokumentasi 3</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" form="form_tambah_laporan" class="modal-action waves-effect waves-green btn-flat ">Simpan</button>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="divider"></div>
+                  <br>
+                  <table class="bordered striped responsive-table">
+                    <tr>
+                      <th>Nama Kegiatan</th>
+                      <th>Tempat Pelaksanaan</th>
+                      <th>Jumlah Peserta</th>
+                      <th>Tanggal Mulai</th>
+                      <th>Tanggal Selesai</th>
+                      <th>Lihat Bukti LPJ</th>
+                      <th>Lihat Press Release</th>
+                      <th>Aksi</th>
+                    </tr>
+                    <tr>
+                      <td>Bluefest</td>
+                      <td>Fakultas Teknik UNJ</td>
+                      <td>300</td>
+                      <td>20-02-2017</td>
+                      <td>23-02-2017</td>
+                      <td>
+                        <a class="waves-effect waves-light btn green">Lihat Bukti</a>
+                      </td>
+                      <td>
+                        <a class="waves-effect waves-light btn green">Lihat Bukti</a>
+                      </td>
+                      <td>
+                        <a class="modal-trigger btn-floating waves-effect waves-light orange tooltipped" data-position="bottom" data-delay="10" data-tooltip="Ubah" href="#modal_edit_laporan">
+                          <i class="material-icons">mode_edit</i>
+                        </a>
+                          <div id="modal_edit_laporan" class="modal modal-fixed-footer">
+                            <div class="modal-content">
+                              <h5>Tambah Data Laporan Kegiatan</h5>
+                              <div class="divider"></div>
+                              <br>
+                              <form validate id="form_edit_laporan">
+                                <div class="row">
+                                  <div class="input-field col s12">
+                                    <input placeholder="Nama Kegiatan" id="nama_kegiatan" type="text" class="validate" required>
+                                    <label for="nama_kegiatan">Nama Kegiatan</label>
+                                  </div>
+                                  <div class="input-field col s12">
+                                    <input placeholder="Bentuk Kegiatan" id="bentuk_kegiatan" type="text" class="validate">
+                                    <label for="bentuk_kegiatan">Bentuk Kegiatan</label>
+                                  </div>
+                                  <div class="input-field col s6">
+                                    <input name="tanggal_mulai" type="date" class="datepicker" required="" aria-required="true">
+                                    <label for="tanggal_mulai">Tanggal Mulai</label>
+                                  </div>
+                                  <div class="input-field col s6">
+                                    <input name="tanggal_selesai" type="date" class="datepicker" required="" aria-required="true">
+                                    <label for="tanggal_selesai">Tanggal Selesai</label>
+                                  </div>
+                                  <div class="input-field col s12">
+                                    <input placeholder="Tempat Pelaksanaan" id="tempat" type="text" class="validate" required>
+                                    <label for="tempat">Tempat Pelaksanaan</label>
+                                  </div>
+                                  <div class="input-field col s12">
+                                    <input placeholder="Jumlah Peserta" id="jumlah_peserta" type="text" class="validate angka" required>
+                                    <label for="tempat">Jumlah Peserta</label>
+                                  </div>
+                                  <div class="input-field col s12">
+                                    <input placeholder="Anggaran yang dipakai" id="anggaran" type="text" class="validate angka" required>
+                                    <label for="tempat">Anggaran yang dipakai</label>
+                                  </div>
+                                  <div class="file-field input-field col s12">
+                                    <div class="btn">
+                                      <span>Press Release (Word)</span>
+                                      <input type="file" required>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text">
+                                    </div>
+                                  </div> 
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="submit" form="form_edit_laporan" class="modal-action waves-effect waves-green btn-flat ">Simpan</button>
+                            </div>
+                          </div>
+
+                        <a class="modal-trigger btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="10" data-tooltip="Hapus" href="#modal_hapus_laporan">
+                          <i class="material-icons">delete_sweep</i>
+                        </a>
+                        <div id="modal_hapus_laporan" class="modal">
+                          <div class="modal-content">
+                            <h4 style="color:orange">PERINGATAN</h4>
+                            <p>Apakah Anda yakin ingin menghapus data ini?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class=" modal-action modal-close waves-effect waves-green btn-flat">Ya</button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+      		</div>
+      	</div>
+      </div>
+    </div>
+	</body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <script type="text/javascript" src="js/materialize.min.js"></script>
+	    <script type="text/javascript" src="js/pickadate.js"></script>
+      <script type="text/javascript" src="js/jquery.cropit.js"></script>
+	    <script>
+	      	$('.dropdown-button').dropdown({
+	          	belowOrigin: true
+	        });
+	        $(document).ready(function(){
+          		$('ul.tabs').tabs();
+        	});
+        	$(document).ready(function(){
+	          $('#ubah_organisasi').modal();
+            $('#tambah_rencana').modal();
+            $('#tambah_laporan').modal();
+            $('#modal_foto').modal();
+            $('#modal_hapus_rencana').modal();
+            $('#modal_edit_laporan').modal();
+            $('#modal_hapus_laporan').modal();
+        	});
+        	$(document).ready(function() {
+          	$('select').material_select();
+        });
+         $('.datepicker').pickadate({
+          selectMonths: true,
+          selectYears: 15
+        });$(function() {
+          $('.image-editor').cropit({
+            exportZoom: 1.25,
+            imageBackground: true,
+            imageBackgroundBorderWidth: 20,
+            imageState: {
+              src: 'http://lorempixel.com/500/400/',
+            },
+          });
+          $('.datepicker').pickadate({
+          selectMonths: true,
+          selectYears: 15
+        });
+          $('#export').click(function() {
+            var imageData = $('.image-editor').cropit('export');
+            $('#hasil_foto').html('<img src="'+imageData+'" style="width:250px; margin-top:50px">');
+            //window.open(imageData);
+          });
+        });
+        
+        //onlynumber
+        $('.angka').on('input', function (event) { 
+        this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        //form
+      </script>
+</html>

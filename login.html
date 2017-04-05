@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      	<title>Sistem Mahasiswa UNJ</title>
+      	<link rel="shortcut icon" href="images/logo_unj.png"/>
+      	<style type="text/css">
+      		#login-panel{
+      			border-radius: 20px;
+      			background-color: #eeeeee; 
+      			opacity:0;
+      			margin-top: -20px;
+      			transition: 1s all;
+      			-webkit-transition: 1s all;
+      			-moz-transition: 1s all;
+      		}
+      	</style>
+	</head>
+	<body style="background-color:#efc94c">
+		<div id="login-page" class="row" style="padding:30px">
+			<div class="col s4">
+			</div>
+			<div class="col s4 m4 z-depth-5 card-panel" id="login-panel">
+				<form id="login-form">
+					<div class="row">
+						<div class="input-field col s12 center">
+							<img src="images/logo_unj.png" alt class="circle responsive-img valign profile-image-login" style="width:130px">
+							<h5 class="center login-form-text">SISTEM MAHASISWA UNJ</h5>
+						</div>
+					</div>
+					<div class="row margin">
+						<div class="input-field col s12">
+				          	<i class="material-icons prefix">account_circle</i>
+				          	<input id="icon_prefix" type="text" class="validate" name="nim" required>
+				          	<label for="icon_prefix">NOREG</label>
+				        </div>
+				        <div class="input-field col s12">
+				          	<i class="material-icons prefix">lock</i>
+				          	<input id="icon_prefix" type="password" class="validate" name="password" required>
+				          	<label for="icon_prefix">KATA SANDI</label>
+				        </div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<center><button type="submit" form="login-form" class="waves-effect waves-light col s12 btn green">MASUK</button></center>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col s4">
+			</div>
+		</div>
+	</body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <script type="text/javascript" src="js/materialize.min.js"></script>
+	    <script type="text/javascript" src="js/master.js"></script>
+	    <script type="text/javascript" src="js/login.js"></script>
+	    <script>
+	    	$(document).ready(function(){
+        		$("#login-panel").css({
+        			'opacity':'1',
+        			'margin-top':'20px'
+        		});
+        	})
+        </script>
+</html>

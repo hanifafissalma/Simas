@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/cropit.css"  media="screen,projection"/>
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      	<title>Sistem Mahasiswa UNJ</title>
+      	<link rel="shortcut icon" href="images/logo_unj.png"/>
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav class="top-nav fixed">
+	       <div class="nav-wrapper">
+	         <a href="#" class="brand-logo">SIMAS</a>
+	            	<ul class="right hide-on-med-and-down">
+	                	<li>
+	              			<a class="dropdown-button" href="#!" data-activates="dropdown1" id="nama_user">
+	                			
+	                			<i class="material-icons right">arrow_drop_down</i>
+	              			</a>
+	            		</li>
+	            	</ul>
+	            	<ul id="dropdown1" class="dropdown-content">
+	        			<li>
+	        				<a href="#!" id="keluar">Keluar 
+	        					<i class="material-icons right">arrow_forward</i>
+	        				</a>
+	        			</li>
+	      			</ul>
+	        	</div>
+	      </nav>
+	   </div>
+		 <div class="row" style="padding:15px">
+      		<div class="col s12 m4 l3 z-depth-3" style="position: relative">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/hani.jpeg" style="position: relative;width: 100%;">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">
+                Hanifa Fissalma
+                <i class="material-icons right">vertical_align_top</i></span>
+                <br>
+                <p><a class="waves-effect waves-light btn orange" href="#modal_foto" style="width:100%">
+                  <i class="modal-trigger material-icons left">party_mode</i>
+                  UBAH FOTO
+                </a>
+                <div id="modal_foto" class="modal">
+                  <div class="modal-content">
+                    <h5>UBAH FOTO</h5>
+                    <div class="divider"></div>
+                    <br>
+                    <div class="row">
+                      <div class="col s6">
+                        <div class="image-editor">
+                          <input type="file" class="cropit-image-input">
+                          <br>
+                          <div class="cropit-preview" style="border:1px solid #000"></div>
+                          <div class="image-size-label">
+                            Menentukan ukuran foto
+                          </div>
+                          <input type="range" class="cropit-image-zoom-input">
+                          <button id="export" class="waves-effect waves-light btn blue">Potong</button>
+                        </div>
+                      </div>
+                      <div class="col s6">
+                        <div id="hasil_foto">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">SIMPAN</a>
+                  </div>
+                </div>
+                </p>    
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                  Hanifa Fissalma
+                  <i class="material-icons right">close</i></span>
+                  <p>5235122734</p>
+                  Pend. Teknik Informatika dan Komputer
+                  <br>
+                  Fakultas Teknik
+              </div>
+            </div>
+      		</div>
+      		<div class="col s12 m8 l9" style="padding-left:30px">
+      			<div class="row">
+    					<div class="col s12">
+      						<ul class="tabs" style="border-radius:5px">
+						        <li class="tab col s2.4"><a href="#1" class="active">BIODATA</a></li>
+						        <li class="tab col s2.4"><a href="#2">DATA ORANG TUA</a></li>
+						        <li class="tab col s2.4"><a href="#3">DATA AKTIVITAS/ORGANISASI</a></li>
+						        <li class="tab col s2.4"><a href="#4">DATA PRESTASI</a></li>
+                    <li class="tab col s2.4"><a href="#5">DAFTAR HASIL STUDI</a></li>
+      						</ul>
+   	 					</div>
+					    <div id="1" class="col s12" style="padding-top:25px">
+					    	<div class="row">
+					    		<div class="col s7">
+					    			<strong><h5>DATA DIRI MAHASISWA</h5></strong>
+					    		</div>
+					    		<div class="col s5">
+					    			<a class="modal-trigger waves-effect waves-light btn orange" href="#modal_data_diri">
+					    				<i class="material-icons right">edit</i>
+					    				UBAH DATA DIRI MAHASISWA
+					    			</a>
+					    			<div id="modal_data_diri" class="modal modal-fixed-footer">
+									    <div class="modal-content">
+									      <h5>UBAH DATA DIRI</h5>
+									      <div class="divider"></div>
+									      <br>
+									      <form id="form_data_diri" class="col s12" class="form form-validate floating-label">
+                        	<div class="input-field col s12">
+                            <input placeholder="NIM" name="nim" type="text" class="angka" required aria-required="true">
+                            <label for="nim">NIM</label>
+                          </div>
+                          <div class="input-field col s12">
+                          	<input placeholder="Nama lengkap Anda" name="nama" type="text" class="validate" required aria-required="true">
+                          	<label for="nama">Nama Lengkap</label>
+                        	</div>
+                          <div class="input-field col s12">
+                            <select name="jenjang" required aria-required="true">
+                              <option value="">Pilih Jenjang</option>
+                            </select>
+                            <label>Jenjang</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <select name="fakultas" required aria-required="true">
+                              <option value="">Pilih Fakultas</option>
+                            </select>
+                            <label>Fakultas</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <select name="prodi" required aria-required="true">
+                              <option value="">Pilih Program Studi</option>
+                            </select>
+                            <label>Program Studi</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input name="tanggal_masuk" type="date" class="datepicker" required="" aria-required="true">
+                            <label for="tanggal_masuk" class="active">Tanggal Masuk</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input name="tanggal_lulus" type="date" class="datepicker" required="" aria-required="true">
+                            <label for="tanggal_lulus" class="active">Tanggal Lulus</label>
+                          </div>
+                        	<div class="input-field col s6">
+                          	<input placeholder="Tempat Lahir" name="tempat_lahir" type="text" class="validate" required aria-required="true">
+                          	<label for="tempat_lahir">Tempat Lahir</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<input name="tanggal_lahir" type="date" class="datepicker" required="" aria-required="true">
+                          	<label for="tanggal_lahir" class="active">Tanggal Lahir</label>
+                        	</div>
+                          <div class="input-field col s12">
+                            <select name="agama" required aria-required="true">
+                              <option value="">Pilih Agama</option>
+                            </select>
+                            <label>Agama</label>
+                          </div>
+                        	<div class="input-field col s12">
+                          	<textarea name="alamat" class="materialize-textarea" placeholder="Alamat saat ini" required aria-required="true"></textarea>
+                          	<label for="alamat">Alamat</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="provinsi" required aria-required="true">
+							                <option value="">Pilih Provinsi</option>
+                          	</select>
+                          	<label>Provinsi</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="kota" required aria-required="true">
+							                <option value=""   selected>Pilih Kabupaten/Kota</option>
+                          	</select>
+                          	<label>Kabupaten/Kota</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="kecamatan" required aria-required="true">
+							                <option value=""   selected>Pilih Kecamatan</option>
+                          	</select>
+                          	<label>Kecamatan</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<input placeholder="kelurahan" name="kelurahan" type="text" class="validate" required aria-required="true">
+                          	<label for="kelurahan">Kelurahan</label>
+                        	</div>
+                          <div class="input-field col s12">
+                            <label>Kewarganegaraan</label>
+                            <br>
+                            <p>
+                              <span>
+                                <input name="kewarganegaraan" type="radio" id="wni" value="WNI" />
+                                <label for="wni">WNI</label>
+                              </span>
+                              <span>
+                                <input name="kewarganegaraan" type="radio" id="wna" value="WNA" />
+                                <label for="wna">WNA</label>
+                              </span>
+                            </p>
+                            <br>
+                          </div>
+                        	<div class="input-field col s12">
+                          	<input placeholder="No.KTP/SIM/PASPOR" name="nik" type="text" class="angka" required aria-required="true">
+                          	<label for="nik">No. KTP/SIM/Paspor</label>
+                       	 	</div>
+                        	<div class="input-field col s6">
+                          	<select name="jenis_kelamin" required aria-required="true">
+							                <option value=""   selected>Pilih Jenis Kelamin</option>
+							                <option value="L">Laki-laki</option>
+							                <option value="P">Perempuan</option>
+                          	</select>
+                          	<label>Jenis Kelamin</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="gol_darah" required aria-required="true">
+							                <option value=""   selected>Pilih Golongan Darah</option>
+							                <option value="O">O</option>
+							                <option value="A">A</option>
+							                <option value="B">B</option>
+							                <option value="AB">AB</option>
+                          	</select>
+                          	<label>Golongan Darah</label>
+                        	</div>
+                        	<div class="input-field col s12">
+                          	<input placeholder="No. Telepon/HP" name="kontak" type="text" class="angka" required aria-required="true">
+                          	<label for="telepon/hp">No. Telepon / HP</label>
+                        	</div>
+                          <div class="input-field col s12">
+                            <input placeholder="Email" name="email" type="email" required aria-required="true">
+                            <label for="email">Email</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <label>Mendapatkan Beasiswa Bidik Misi?</label>
+                            <br>
+                            <p>
+                              <span>
+                                <input name="bidik_misi" type="radio" id="ya" value="ya" />
+                                <label for="ya">Ya</label>
+                              </span>
+                              <span>
+                                <input name="bidik_misi" type="radio" id="tidak" value="tidak" />
+                                <label for="tidak">Tidak</label>
+                              </span>
+                            </p>
+                            <br>
+                          </div>
+                      	</form>
+									    </div>
+									    <div class="modal-footer">
+									      <button type="submit" form="form_data_diri" class="waves-effect waves-light btn blue">SIMPAN</button>
+									    </div>
+									</div>
+					    		</div>
+					    	</div>
+					    	<div class="divider"></div>
+					    	<br>
+					    	<table class="bordered">
+                  <tbody>
+                    <tr> 
+                      <td width="200px">Noreg</td>
+                      <td width="10px">:</td>
+                      <td id="nim">-</td>
+                    </tr>
+                    <tr>
+                      <td>Nama</td>
+                      <td>:</td>
+                      <td id="nama">-</td>
+                    </tr>
+                    <tr>
+                      <td>Jenjang</td>
+                      <td>:</td>
+                      <td id="jenjang">-</td>
+                    </tr>
+                    <tr>
+                      <td>Fakultas</td>
+                      <td>:</td>
+                      <td id="fakultas">-</td>
+                    </tr>
+                    <tr>
+                      <td>Program Studi</td>
+                      <td>:</td>
+                      <td id="prodi">-</td>
+                    </tr>
+                    <tr>
+                      <td>Tanggal Masuk</td>
+                      <td>:</td>
+                      <td id="tanggal_masuk">-</td>
+                    </tr>
+                    <tr>
+                      <td>Tanggal Lulus</td>
+                      <td>:</td>
+                      <td id="tanggal_lulus">-</td>
+                    </tr>
+                    <tr>
+                      <td>Tempat Lahir</td>
+                      <td>:</td>
+                      <td id="tempat_lahir">-</td>
+                    </tr>
+                    <tr>
+                      <td>Tanggal Lahir</td>
+                      <td>:</td>
+                      <td id="tanggal_lahir">-</td>
+                    </tr>
+                    <tr>
+                      <td>Agama</td>
+                      <td>:</td>
+                      <td id="agama"></td>
+                    </tr>
+                    <tr>
+                      <td>Alamat</td>
+                      <td>:</td>
+                      <td id="alamat">-</td>
+                    </tr>
+                    <tr>
+                      <td>Provinsi</td>
+                      <td>:</td>
+                      <td id="provinsi"></td>
+                    </tr>
+                    <tr>
+                      <td>Kabupaten/kota</td>
+                      <td>:</td>
+                      <td id="kota"></td>
+                    </tr>
+                    <tr>
+                      <td>Kecamatan</td>
+                      <td>:</td>
+                      <td id="kecamatan"></td>
+                    </tr>
+                    <tr>
+                      <td>Kelurahan</td>
+                      <td>:</td>
+                      <td id="kelurahan">-</td>
+                    </tr>
+                    <tr>
+                      <td>Kewarganegaraan</td>
+                      <td>:</td>
+                      <td id="kewarganegaraan">-</td>
+                    </tr>
+                    <tr>
+                      <td>No. KTP</td>
+                      <td>:</td>
+                      <td id="nik">-</td>
+                    </tr>
+                    <tr>
+                      <td>Jenis Kelamin</td>
+                      <td>:</td>
+                      <td id="jenis_kelamin">-</td>
+                    </tr>
+                    <tr>
+                      <td>Golongan Darah</td>
+                      <td>:</td>
+                      <td id="gol_darah"></td>
+                    </tr>
+                    <tr>
+                      <td>No. Telpon/HP</td>
+                      <td>:</td>
+                      <td id="kontak">-</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>:</td>
+                      <td id="email">-</td>
+                    </tr>
+                    <tr>
+                      <td>Bidik Misi</td>
+                      <td>:</td>
+                      <td id="bidik_misi">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+					   	</div>
+					    <div id="2" class="col s12" style="padding-top:25px">
+					    	<div class="row">
+					    		<div class="col s7">
+					    			<strong><h5>DATA ORANG TUA</h5></strong>
+					    		</div>
+					    		<div class="col s5">
+					    			<a class="modal-trigger waves-effect waves-light btn orange" href="#modal_data_orang_tua">
+					    				<i class="material-icons right">edit</i>
+					    				UBAH DATA ORANG TUA
+					    			</a>
+					    			<div id="modal_data_orang_tua" class="modal modal-fixed-footer">
+									    <div class="modal-content">
+									      <h5>UBAH DATA ORANG TUA</h5>
+									      <div class="divider"></div>
+									      <br>
+									      <h6>DATA AYAH</h6>
+                      	<br>
+                      	<form class="col s12" id="form_data_orang_tua">
+                        	<div class="input-field col s12">
+                          	<input placeholder="Nama Lengkap Ayah" name="nama_ayah" type="text" class="validate" required aria-required="true">
+                          	<label for="nama_ayah">Nama Ayah</label>
+                        	</div>
+                        	<div class="input-field col s12">
+                          	<input placeholder="No. KTP/SIM/Paspor" name="no_identitas_ayah" type="text" class="angka" required aria-required="true">
+                          	<label for="no_identitas_ayah">No. KTP/SIM/Paspor</label>
+                        	</div>
+                        	<div class="input-field col s12">
+                          	<input placeholder="No. Telepon/HP Ayah" name="no_telpon_ayah" type="text" class="angka" required aria-required="true">
+                          	<label for="no_telpon_ayah">No. Telepon / HP Ayah</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="pekerjaan_ayah" required aria-required="true">
+							                <option value=""   selected>Pilih Pekerjaan</option>
+							                <option value="1">Tidak Bekerja</option>
+							                <option value="2">Wiraswasta</option>
+							                <option value="3">PNS Non guru</option>
+                          	</select>
+                          	<label>Pekerjaan Ayah</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="penghasilan_ayah" required aria-required="true">
+							                <option value=""   selected>Pilih Penghasilan</option>
+							                <option value="1">Rp. 0 - Rp. 1.000.000</option>
+							                <option value="2">Rp. 1.000.001 - Rp. 2.000.000</option>
+							                <option value="3">Rp. 2.000.001 - Rp. 3.000.000</option>
+                          	</select>
+                          	<label>Penghasilan Ayah</label>
+                        	</div>
+						              <br>
+						              <h6>DATA IBU</h6>
+						              <br>
+						              <div class="input-field col s12">
+                          	<input placeholder="Nama Lengkap Ibu" name="nama_ibu" type="text" class="validate" required aria-required="true">
+                          	<label for="nama_ibu">Nama Ibu</label>
+						              </div>
+						              <div class="input-field col s12">
+                          	<input placeholder="No. KTP/SIM/Paspor" name="no_identitas_ibu" type="text" class="angka" required aria-required="true">
+                          	<label for="no_identitas_ibu">No. KTP/SIM/Paspor</label>
+                        	</div>
+                        	<div class="input-field col s12">
+                          	<input placeholder="No. Telepon/HP Ibu" name="no_telpon_ibu" type="text" class="angka" required aria-required="true">
+                          	<label for="no_telpon_ibu">No. Telepon / HP Ibu</label>
+						              </div>
+						              <div class="input-field col s6">
+                          	<select name="pekerjaan_ibu" required aria-required="true">
+							                <option value=""   selected>Pilih Pekerjaan</option>
+							                <option value="1">Tidak Bekerja</option>
+							                <option value="2">Wiraswasta</option>
+							                <option value="3">PNS Non guru</option>
+                          	</select>
+                          	<label>Pekerjaan Ibu</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="penghasilan_ibu" required aria-required="true">
+							                <option value=""   selected>Pilih Penghasilan</option>
+							                <option value="1">Rp. 0 - Rp. 1.000.000</option>
+							                <option value="2">Rp. 1.000.001 - Rp. 2.000.000</option>
+							                <option value="3">Rp. 2.000.001 - Rp. 3.000.000</option>
+                          	</select>
+                          	<label>Penghasilan Ibu</label>
+                        	</div>
+						              <br>
+						              <h6>ALAMAT TINGGAL ORANG TUA</h6>
+						              <br>
+						              <div class="input-field col s12">
+                          	<textarea name="alamat_orang_tua" class="materialize-textarea" required aria-required="true"></textarea>
+                          	<label for="alamat_orang_tua">Alamat orang tua</label>
+						              </div>
+						              <div class="input-field col s6">
+                          	<select name="provinsi" required aria-required="true">
+							                <option value=""   selected>Pilih Provinsi</option>
+                          	</select>
+                          	<label>Provinsi</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="kabkot" required aria-required="true">
+							                <option value=""   selected>Pilih Kabupaten/Kota</option>
+                          	</select>
+                          	<label>Kabupaten/Kota</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<select name="kecamatan" required aria-required="true">
+							                <option value=""   selected>Pilih Kecamatan</option>
+                          	</select>
+                          	<label>Kecamatan</label>
+                        	</div>
+                        	<div class="input-field col s6">
+                          	<input placeholder="kelurahan" name="kelurahan" type="text" class="validate" required aria-required="true">
+                          	<label for="kelurahan">Kelurahan</label>
+                        	</div>
+                      	</form>
+									    </div>
+									    <div class="modal-footer">
+									      <button type="submit" form="form_data_orang_tua" class="waves-effect waves-light btn blue">SIMPAN</button>
+									    </div>
+									  </div>
+					    		</div>
+					    	</div>
+					    	<div class="divider"></div>
+					    	<br>
+                <table class="bordered">
+                  <tbody>
+                    <tr>
+                      <td colspan="3"><strong>DATA AYAH</strong></td>
+                    </tr>
+                    <tr> 
+                      <td width="200px">Nama Ayah</td>
+                      <td width="10px">:</td>
+                      <td>Papa bin Papa</td>
+                    </tr>
+                    <tr>
+                      <td>No. KTP/SIM/Paspor</td>
+                      <td>:</td>
+                      <td>123456789101112</td>
+                    </tr>
+                    <tr>
+                      <td>No. Telepon/HP Ayah</td>
+                      <td>:</td>
+                      <td>08122222222</td>
+                    </tr>
+                    <tr>
+                      <td>Pekerjaan Ayah</td>
+                      <td>:</td>
+                      <td>Pegawai Swasta</td>
+                    </tr>
+                    <tr>
+                      <td>Penghasilan Ayah</td>
+                      <td>:</td>
+                      <td>Rp. 1.000.001 - Rp. 2.000.000 </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"><strong>DATA IBU</strong></td>
+                    </tr>
+                    <tr> 
+                      <td>Nama Ibu</td>
+                      <td>:</td>
+                      <td>Mama bin mama</td>
+                    </tr>
+                    <tr>
+                      <td>No. KTP/SIM/Paspor</td>
+                      <td>:</td>
+                      <td>123456789101112</td>
+                    </tr>
+                    <tr>
+                      <td>No. Telepon/HP Ibu</td>
+                      <td>:</td>
+                      <td>08122222222</td>
+                    </tr>
+                    <tr>
+                      <td>Pekerjaan Ibu</td>
+                      <td>:</td>
+                      <td>Pegawai Negeri</td>
+                    </tr>
+                    <tr>
+                      <td>Penghasilan Ibu</td>
+                      <td>:</td>
+                      <td>Rp. 1.000.001 - Rp. 2.000.000 </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"><strong>ALAMAT TINGGAL ORANG TUA</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Alamat</td>
+                      <td>:</td>
+                      <td>Jl. Anggrek 2 No. 256 RT010/007 Perumnas 1</td>
+                    </tr>
+                    <tr>
+                      <td>Provinsi</td>
+                      <td>:</td>
+                      <td>Jawa Barat</td>
+                    </tr>
+                    <tr>
+                      <td>Kabupaten/kota</td>
+                      <td>:</td>
+                      <td>Kota Bekasi</td>
+                    </tr>
+                    <tr>
+                      <td>Kecamatan</td>
+                      <td>:</td>
+                      <td>Bekasi Barat</td>
+                    </tr>
+                    <tr>
+                      <td>Kelurahan</td>
+                      <td>:</td>
+                      <td>Jakasampurna</td>
+                    </tr>
+                  </tbody>
+                </table>
+					    </div>
+					    <div id="3" class="col s12" style="padding-top:25px">
+					    	<div class="row">
+					    		<div class="col s6">
+					    			<strong><h5>DATA AKTIVITAS/ORGANISASI</h5></strong>
+					    		</div>
+					    		<div class="col s6">
+					    			<a class="modal-trigger waves-effect waves-light btn blue" href="#modal_kegiatan">
+					    				<i class="material-icons right">add</i>
+					    				TAMBAH DATA AKTIVITAS/ORGANISASI
+					    			</a>
+					    			<div id="modal_kegiatan" class="modal modal-fixed-footer">
+									    <div class="modal-content">
+									      <h5>TAMBAH DATA AKTIVITAS/ORGANISASI</h5>
+									      <div class="divider"></div>
+									      <br>
+									      <form class="col s12" id="form_aktivitas">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input placeholder="Nama Aktivitas/Organisasi" name="nama_aktivitas" type="text" class="validate" required aria-required="true">
+				                      <label for="nama_aktivitas">Nama Aktivitas/Organisasi</label>
+				                    </div>
+				                    <div class="input-field col s12">
+				                      <select name="pilih_jenis_aktivitas" required aria-required="true">
+							                  <option value=""   selected>Pilih Jenis Aktivitas/Organisasi</option>
+							                  <option value="1">Pengurus Organisasi</option>
+							                  <option value="2">Kegiatan Lomba Ilmiah</option>
+							                  <option value="3">Kegiatan/Forum Ilmiah (Seminar,Lokakarya,Workshop,Pameran)</option>
+                                <option value="4">Mengikuti kuliah dosen tamu</option>
+				                      </select>
+				                      <label>Level Aktivitas/Organisasi</label>
+				                    </div>
+                            <div class="input-field col s12">
+                              <select name="pilih_jenjang_aktivitas" required aria-required="true">
+                                <option value="" selected>Pilih Jenjang Aktivitas/Organisasi</option>
+                                <option value="1">UKM</option>
+                                <option value="2">HMJ</option>
+                                <option value="3">BEM</option>
+                                <option value="4">Regional</option>
+                                <option value="5">Nasional</option>
+                                <option value="6">Internasional</option>
+                              </select>
+                              <label>Level Aktivitas/Organisasi</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Nama Jabatan/Posisi" name="nama_jabatan" type="text" class="validate" required aria-required="true">
+                              <label for="nama_jabatan">Nama Jabatan/Posisi</label>
+                            </div>
+				                    <div class="input-field col s12">
+				                      <textarea name="deskripsi_aktivitas" class="materialize-textarea"></textarea>
+				                      <label for="deskripsi_aktivitas">Deskripsi</label>
+				                    </div>
+				                    <div class="file-field input-field col s12">
+				                      <div class="btn">
+				                        <span>Bukti Dokumen</span>
+				                        <input type="file" id="bukti_dokumen">
+				                      </div>
+				                      <div class="file-path-wrapper">
+				                        <input class="file-path validate" type="text">
+				                      </div>
+				                    </div>
+				                  </div>
+				                </form>
+									    </div>
+									    <div class="modal-footer">
+									      <button type="submit" form="form_aktivitas" class="waves-effect waves-light btn blue">SIMPAN</button>
+									    </div>
+									</div>
+					    		</div>
+					    	</div>
+					    	<div class="divider"></div>
+					    	<br>
+					    	<div class="row">
+					    		<div class="col s12">
+					    			<table class="bordered highlight">
+					            <thead>
+					              <tr>
+					                <th data-field="nama_aktivitas">Nama Aktivitas/Organisasi</th>
+					                <th data-field="jenis_aktivitas">Jenis Aktivitas/Organisasi</th>
+                          <th data-field="jenjang_aktivitas">Jenjang Aktivitas/Organisasi</th>
+                          <th data-field="jabatan">Jabatan/Posisi</th>
+					                <th data-field="deskripsi_aktivitas">Deskripsi</th>
+					                <th data-field="bukti_dokumen">Bukti Dokumen</th>
+					                <th data-field="aksi">Aksi</th>
+					              </tr>
+					            </thead>
+					            <tbody>
+					              <tr>
+						              <td>BEM FT</td>
+						              <td>Pengurus Organisasi</td>
+                          <td>Universitas</td>
+						              <td>Sekretaris (2010-2012)</td>
+                          <td>Menjabat sebagai sekretaris yang bertugas</td>
+						              <td><a class="waves-effect waves-light btn green">Lihat Bukti</a></td>
+						              <td>
+                          	<a class="modal-trigger btn-floating waves-effect waves-light orange tooltipped" data-position="bottom" data-delay="10" data-tooltip="Ubah" href="#modal_edit_aktivitas">
+                            	<i class="material-icons">edit</i>
+                          	</a>
+                          	<div id="modal_edit_aktivitas" class="modal modal-fixed-footer">
+                            	<div class="modal-content">
+                              	<h5>UBAH DATA AKTIVITAS/ORGANISASI</h5>
+                              	<div class="divider"></div>
+                              	<br>
+                                <form class="col s12" id="form_edit_aktivitas">
+                                  <div class="row">
+                                    <div class="input-field col s12">
+                                      <input placeholder="Nama Aktivitas/Organisasi" name="nama_aktivitas" type="text" class="validate" required>
+                                      <label for="nama_aktivitas">Nama Aktivitas/Organisasi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <select name="pilih_jenis_aktivitas" required>
+                                        <option value=""   selected>Pilih Jenis Aktivitas/Organisasi</option>
+                                        <option value="1">Pengurus Organisasi</option>
+                                        <option value="2">Kegiatan Lomba Ilmiah</option>
+                                        <option value="3">Kegiatan/Forum Ilmiah (Seminar,Lokakarya,Workshop,Pameran)</option>
+                                        <option value="4">Mengikuti kuliah dosen tamu</option>
+                                      </select>
+                                      <label>Level Aktivitas/Organisasi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <select name="pilih_jenjang_aktivitas" required>
+                                        <option value=""   selected>Pilih Jenjang Aktivitas/Organisasi</option>
+                                        <option value="1">UKM</option>
+                                        <option value="2">HMJ</option>
+                                        <option value="3">BEM</option>
+                                        <option value="4">Regional</option>
+                                        <option value="5">Nasional</option>
+                                        <option value="6">Internasional</option>
+                                      </select>
+                                      <label>Level Aktivitas/Organisasi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <input placeholder="Nama Jabatan/Posisi" name="nama_jabatan" type="text" class="validate" required>
+                                      <label for="nama_jabatan">Nama Jabatan/Posisi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <textarea id="deskripsi_aktivitas" class="materialize-textarea"></textarea>
+                                      <label for="deskripsi_aktivitas">Deskripsi</label>
+                                    </div>
+                                    <div class="file-field input-field col s12">
+                                      <div class="btn">
+                                        <span>Bukti Dokumen</span>
+                                        <input type="file" id="bukti_dokumen">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                            	</div>
+                            	<div class="modal-footer">
+                              	<button type="submit" form="form_edit_aktivitas" class="waves-effect waves-light btn blue ">SIMPAN</a>
+                            	</div>
+                          	</div>
+                          		<a class="modal-trigger btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="10" data-tooltip="Hapus" href="#modal_delete_aktivitas">
+                            		<i class="material-icons">delete_sweep</i>
+                          		</a>
+                          		<div id="modal_delete_aktivitas" class="modal">
+                            		<div class="modal-content">
+                              		<h4 style="color:orange">PERINGATAN</h4>
+                              		<p>Apakah Anda yakin ingin menghapus data ini?</p>
+                            		</div>
+                            		<div class="modal-footer">
+                              		<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ya</a>
+                            		</div>
+                          		</div>
+                        		</td>
+                      		</tr>
+                    	</tbody>
+                  	</table>
+					    	  </div>
+					    	</div>
+					    </div>
+					    <div id="4" class="col s12" style="padding-top:25px">
+					    	<div class="row">
+					    		<div class="col s7">
+					    			<strong><h5>DATA PRESTASI</h5></strong>
+					    		</div>
+					    		<div class="col s5">
+					    			<a class="modal-trigger waves-effect waves-light btn blue" href="#modal_prestasi">
+					    				<i class="material-icons right">add</i>
+					    				TAMBAH DATA PRESTASI
+					    			</a>
+					    			<div id="modal_prestasi" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                      	<h5>TAMBAH DATA PRESTASI</h5>
+                      	<div class="divider"></div>
+                      	<br>
+                        <form class="col s12" id="form_prestasi">
+	                      	<div class="row">
+                            <div class="input-field col s12">
+                              <input name="tanggal_pelaksanaan" type="date" class="datepicker" required="" aria-required="true">
+                              <label for="tanggal_pelaksanaan">Tanggal Pelaksanaan</label>
+                            </div>
+	                      		<div class="input-field col s12">
+	                      			<input placeholder="Nama Prestasi" name="nama_prestasi" type="text" class="validate" required>
+	                            <label for="nama_prestasi">Nama Prestasi</label>
+	                          </div>
+                            <div class="input-field col s12">
+                              <input placeholder="Tempat Pelaksanaan" name="tempat_pelaksana" type="text" class="validate" required>
+                              <label for="tempat_pelaksana">Tempat Pelaksana</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input placeholder="Institusi Pelaksanaan" name="institusi_pelaksana" type="text" class="validate" required>
+                              <label for="institusi_pelaksana">Institusi Pelaksana</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input placeholder="Negara Pelaksanaan" name="negara" type="text" class="validate" required>
+                              <label for="institusi_pelaksana">Negara Pelaksana</label>
+                            </div>
+	                          <div class="input-field col s12">
+	                            <select name="pilih_jenis_prestasi" required>
+	                              <option value=""   selected>Pilih Jenis Prestasi</option>
+	                              <option value="1">Lomba Karya Tulis Ilmiah/Lingkungan hidup/ Kreativitas/ Business Plan</option>
+	                              <option value="2">Menghasilkan karya ilmiah yang dipublikasikan</option>
+	                              <option value="3">Menghasilkan karya ilmiah yang didanai pemerintah</option>
+                                <option value="4">MAWAPRES</option>
+                                <option VALUE="5">Prestasi dalam kegiatan minat dan bakat (Olahraga, seni dan kerohanian)</option>
+	                            </select>
+	                            <label>Level Prestasi</label>
+	                          </div>
+                            <div class="input-field col s12">
+                              <select name="pilih_jenjang_prestasi" required>
+                                <option value=""   selected>Pilih Jenjang Prestasi</option>
+                                <option value="1">Program Studi</option>
+                                <option value="2">Universitas</option>
+                                <option value="3">Regional</option>
+                                <option value="4">Nasional</option>
+                                <option VALUE="5">Internasional</option>
+                              </select>
+                              <label>Level Prestasi</label>
+                            </div>
+	                          <div class="input-field col s12">
+	                            <textarea id="deskripsi_prestasi" class="materialize-textarea"></textarea>
+	                            <label for="deskripsi_prestasi">Deskripsi</label>
+	                          </div>
+	                          <div class="file-field input-field col s12">
+	                            <div class="btn">
+	                              <span>Bukti Scan Sertifikat/Piagam</span>
+	                              <input type="file" id="bukti_dokumen_prestasi">
+	                            </div>
+	                            <div class="file-path-wrapper">
+	                              <input class="file-path validate" type="text">
+	                            </div>
+	                          </div>
+	                        	<div class="file-field input-field col s12">
+	                            <div class="btn">
+	                              <span>Bukti Dokumentasi Kegiatan</span>
+	                              <input type="file" id="bukti_dokumentasi_prestasi">
+	                            </div>
+	                            <div class="file-path-wrapper">
+	                             	<input class="file-path validate" type="text">
+	                            </div>
+	                          </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Bukti Scan Halaman Depan Buku Tabungan/Rekening</span>
+                                <input type="file" id="scan_buku_tabungan">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+                            <div class="file-field input-field col s12">
+                              <div class="btn">
+                                <span>Bukti Scan KTM</span>
+                                <input type="file" id="scan_ktm">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                            </div>
+	                        </div>
+                      	</form>
+                      </div>
+                    	<div class="modal-footer">
+                      	<button type="submit" form="form_prestasi" class="waves-effect waves-light btn blue ">SIMPAN</button>
+                    	</div>
+                		</div>
+                	</div>
+                </div>
+                <div class="divider"></div>
+                <br>
+                <div class="row">
+                	<div class="col s12">
+                		<table class="bordered highlight">
+                    	<thead>
+                      	<tr>
+							            <th data-field="nama_prestasi">Nama Prestasi</th>
+							            <th data-field="jenis_prestasi">Jenis Prestasi</th>
+                          <th data-field="jenjang_prestasi">Jenjang Prestasi</th>
+							            <th data-field="deskripsi_prestasi">Deskripsi</th>
+							            <th data-field="bukti_dokumen">Bukti Dokumen</th>
+							            <th data-field="bukti_dokumentasi">Bukti Dokumentasi</th>
+							            <th data-field="aksi">Aksi</th>
+                      	</tr>
+                    	</thead>
+                    	<tbody>
+                      	<tr>
+							            <td>Juara III Makan Kerupuk</td>
+							            <td>Lomba Karya Ilmiah</td>
+                          <td>Internasional</td>
+							            <td>Diadakan di Melbourne, Australia</td>
+							            <td><a class="waves-effect waves-light btn green">Lihat</a></td>
+							            <td>Tidak ada</td>
+							            <td>
+                          	<a class="modal-trigger btn-floating waves-effect waves-light orange tooltipped" data-position="bottom" data-delay="10" data-tooltip="Ubah" href="#modal_edit_prestasi">
+                            	<i class="material-icons">edit</i>
+                          	</a>
+                          	<div id="modal_edit_prestasi" class="modal modal-fixed-footer">
+                            	<div class="modal-content">
+                              	<h5>UBAH DATA PRESTASI</h5>
+                              	<div class="divider"></div>
+                              	<br>
+                              	<form class="col s12" id="form_edit_prestasi">
+                                	<div class="row">
+                                	  <div class="input-field col s12">
+                                      <input name="tanggal_pelaksanaan" type="date" class="datepicker" required="" aria-required="true">
+                                      <label for="tanggal_pelaksanaan">Tanggal Pelaksanaan</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <input placeholder="Nama Prestasi" name="nama_prestasi" type="text" class="validate" required>
+                                      <label for="nama_prestasi">Nama Prestasi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <input placeholder="Tempat Pelaksanaan" name="tempat_pelaksana" type="text" class="validate" required>
+                                      <label for="tempat_pelaksana">Tempat Pelaksana</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                      <input placeholder="Institusi Pelaksanaan" name="institusi_pelaksana" type="text" class="validate" required>
+                                      <label for="institusi_pelaksana">Institusi Pelaksana</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                      <input placeholder="Negara Pelaksanaan" name="negara" type="text" class="validate" required>
+                                      <label for="institusi_pelaksana">Negara Pelaksana</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <select name="pilih_jenis_prestasi" required>
+                                        <option value=""   selected>Pilih Jenis Prestasi</option>
+                                        <option value="1">Lomba Karya Tulis Ilmiah/Lingkungan hidup/ Kreativitas/ Business Plan</option>
+                                        <option value="2">Menghasilkan karya ilmiah yang dipublikasikan</option>
+                                        <option value="3">Menghasilkan karya ilmiah yang didanai pemerintah</option>
+                                        <option value="4">MAWAPRES</option>
+                                        <option VALUE="5">Prestasi dalam kegiatan minat dan bakat (Olahraga, seni dan kerohanian)</option>
+                                      </select>
+                                      <label>Level Prestasi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <select name="pilih_jenjang_prestasi" required>
+                                        <option value=""   selected>Pilih Jenjang Prestasi</option>
+                                        <option value="1">Program Studi</option>
+                                        <option value="2">Universitas</option>
+                                        <option value="3">Regional</option>
+                                        <option value="4">Nasional</option>
+                                        <option VALUE="5">Internasional</option>
+                                      </select>
+                                      <label>Level Prestasi</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                      <textarea id="deskripsi_prestasi" class="materialize-textarea"></textarea>
+                                      <label for="deskripsi_prestasi">Deskripsi</label>
+                                    </div>
+                                    <div class="file-field input-field col s12">
+                                      <div class="btn">
+                                        <span>Bukti Scan Sertifikat/Piagam</span>
+                                        <input type="file" id="bukti_dokumen_prestasi">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                    <div class="file-field input-field col s12">
+                                      <div class="btn">
+                                        <span>Bukti Dokumentasi Kegiatan</span>
+                                        <input type="file" id="bukti_dokumentasi_prestasi">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                    <div class="file-field input-field col s12">
+                                      <div class="btn">
+                                        <span>Bukti Scan Halaman Depan Buku Tabungan/Rekening</span>
+                                        <input type="file" id="scan_buku_tabungan">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                    <div class="file-field input-field col s12">
+                                      <div class="btn">
+                                        <span>Bukti Scan KTM</span>
+                                        <input type="file" id="scan_ktm">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+  	                          <div class="modal-footer">
+  	                            <button type="submit" form="form_edit_prestasi" class="waves-effect waves-light btn blue">SIMPAN</a>
+  	                          </div>
+  	                        </div>
+                            	<a class="modal-trigger btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="10" data-tooltip="Hapus" href="#modal_delete_prestasi">
+                              	<i class="material-icons">delete_sweep</i>
+                            	</a>
+                            	<div id="modal_delete_prestasi" class="modal">
+                              	<div class="modal-content">
+                                	<h4 style="color:orange">PERINGATAN</h4>
+                                	<p>Apakah Anda yakin ingin menghapus data ini?</p>
+                              	</div>
+                              	<div class="modal-footer">
+                                	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ya</a>
+                              	</div>
+                            	</div>
+                          	</td>
+                        	</tr>
+                      	</tbody>
+                    	</table>
+                  	</div>
+                  </div>
+  					    </div>
+              <div id="5" class="col s12" style="padding-top:25px">
+                <div class="row">
+                  <div class="col s7">
+                    <strong><h5>DAFTAR HASIL STUDI</h5></strong>
+                  </div>
+                  <div class="col s5">
+                    <a class="waves-effect waves-light btn red">
+                      <i class="material-icons right">assignment</i>
+                      CETAK DAFTAR HASIL STUDI
+                    </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="divider"></div>
+                    <br>
+                    <table class="bordered highlight">
+                      <thead>
+                        <tr>
+                          <th data-field="no">No</th>
+                          <th data-field="mata_kuliah">Mata Kuliah</th>
+                          <th data-field="dosen">Dosen</th>
+                          <th data-field="sks">SKS</th>
+                          <th data-field="nilai">Nilai</th>
+                          <th data-field="bobot">Bobot</th>
+                          <th data-field="semester">Semester</th>
+                          <th data-field="status">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Matematika Diskrit</td>
+                          <td>Med Irzal,M.Kom</td>
+                          <td>3</td>
+                          <td>B</td>
+                          <td>9</td>
+                          <td>097</td>
+                          <td>Terdaftar</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Desain Web</td>
+                          <td>Hamidillah Ajie,M.T</td>
+                          <td>2</td>
+                          <td>A</td>
+                          <td>8</td>
+                          <td>098</td>
+                          <td>Terdaftar</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Jaringan Komputer</td>
+                          <td>M. Ficky Duskarnaen,M.Sc</td>
+                          <td>3</td>
+                          <td>C</td>
+                          <td>6</td>
+                          <td>099</td>
+                          <td>Terdaftar</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <b>Indeks Prestasi = Jumlah (SKS x Nilai) / Jumlah SKS = 527 / 153 = 3.44</b>
+              </div>
+  					</div>
+      		</div>
+      	</div>
+      </div>
+    </div>
+	</body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <script type="text/javascript" src="js/materialize.min.js"></script>
+	    <!-- <script type="text/javascript" src="js/pickadate.js"></script> -->
+      <script type="text/javascript" src="js/jquery.cropit.js"></script>
+      <script type="text/javascript" src="js/master.js"></script>
+      <script type="text/javascript" src="js/terserah.js"></script>
+	    <script>
+	      	$('.dropdown-button').dropdown({
+	          	belowOrigin: true
+	        });
+	        $(document).ready(function(){
+          		$('ul.tabs').tabs();
+        	});
+        	$(document).ready(function(){
+	          $('#modal_kegiatan').modal();
+	          $('#modal_edit_aktivitas').modal();
+	          $('#modal_delete_aktivitas').modal();
+	          $('#modal_prestasi').modal();
+	          $('#modal_edit_prestasi').modal();
+	          $('#modal_delete_prestasi').modal();
+	          $('#modal_data_diri').modal();
+	          $('#modal_data_orang_tua').modal();
+            $('#modal_foto').modal();
+        	});
+        	$(document).ready(function() {
+          	$('select').material_select();
+        });
+        $(function() {
+          $('#export').click(function() {
+            var imageData = $('.image-editor').cropit('export');
+            $('#hasil_foto').html('<img src="'+imageData+'" style="width:250px; margin-top:50px">');
+            //window.open(imageData);
+          });
+        });
+        
+        //onlynumber
+        $('.angka').on('input', function (event) { 
+        this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        //form
+        $('#form_data_diri').on('submit',function(event){
+          event.preventDefault();
+        }),
+        $('#form_data_orang_tua').on('submit',function(event){
+          event.preventDefault();
+        })
+      </script>
+</html>
